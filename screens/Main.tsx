@@ -6,20 +6,20 @@ import { useNavigation } from '@react-navigation/native';
 import colors from '../utils/colors';
 
 // Define the type for navigation prop
-type MainScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Welcome'>;
+type MainScreenNavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
 const Main: React.FC = () => {
   const navigation = useNavigation<MainScreenNavigationProp>();
 
   return (
     <View style={styles.mainContainer}>
-      <Text style={styles.welcomeText}>Welcome to React Native!</Text>
-      
+      <Text style={styles.welcomeText}>Nike. Just Do It.</Text>
       <Image
-        source={{ uri: 'https://scontent.fhyd1-3.fna.fbcdn.net/v/t39.30808-6/315535273_644254940732890_1965975177868866243_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=C1uDZu_rHTsQ7kNvgEAr8LP&_nc_ht=scontent.fhyd1-3.fna&_nc_gid=A6tLV7QqE46xGqbZg9nhSX9&oh=00_AYB8ep49URXBy4m0wHeDLODL43EtSO7CIjMuNdbXk6SCNw&oe=66F4F9BC' }} // Replace with your logo URI
+        source={{ uri: 'https://assets.zenn.com/blog/4240180c-a9f2-4c2f-b439-cfa200575452.jpg' }} // Replace with your logo URI
         style={styles.logo}
         resizeMode="contain"
       />
+      
 
       <View style={styles.buttonContainer}>
         <Pressable onPress={() => navigation.navigate('Login')} style={styles.button}>
@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
     color: colors.text,
     fontSize: 30,
     marginBottom: 20,
-    fontWeight:"500"
+    fontWeight:"500",
+    fontStyle:"italic"
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -56,6 +57,7 @@ const styles = StyleSheet.create({
     width: 200,
     height: 200,
     borderRadius: 100,
+    backgroundColor: "black",
   },
   button: {
     backgroundColor: colors.secondary,

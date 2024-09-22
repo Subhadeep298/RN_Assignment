@@ -5,7 +5,9 @@ import colors from '../utils/colors';
 const Footer = () => {
   return (
     <View style={styles.footerContainer}>
-      <Text style={styles.footerText}>This is an italic footer message.</Text>
+      <Text style={styles.footerText}>
+      © {new Date().getFullYear()} Your App Name. All rights reserved.
+      </Text>
     </View>
   );
 };

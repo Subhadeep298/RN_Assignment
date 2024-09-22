@@ -20,7 +20,7 @@ export default function App() {
     <NavigationContainer>
         <SafeAreaView>
         
-        <StatusBar backgroundColor="#b27cf2" />
+        <StatusBar backgroundColor="#3C3D37" />
         <SearchHeader />
         <Stack.Navigator
           initialRouteName="Welcome"
